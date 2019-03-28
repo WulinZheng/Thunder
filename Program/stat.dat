@@ -1,0 +1,92 @@
+<root>
+	<node type='ReportEventNode' >
+		<index>5172</index>
+		<processID>11984</processID>
+		<time>1553739437</time>
+		<reporttime>1553739437</reporttime>
+		<extdata>button=exit</extdata>
+		<timestring>19-03-28 09:17:17</timestring>
+		<reporttimestring>19-03-28 09:17:17</reporttimestring>
+		<attribute1>float_monitor_rk_click</attribute1>
+		<attribute2/>
+		<cost1>0</cost1>
+		<cost2>0</cost2>
+		<cost3>0</cost3>
+		<cost4>0</cost4>
+	</node>
+	<node type='ReportEventNode' >
+		<index>5168</index>
+		<processID>8016</processID>
+		<time>1553739437</time>
+		<reporttime>1553739437</reporttime>
+		<extdata>exitType=manual,online_time=141.992</extdata>
+		<timestring>19-03-28 09:17:17</timestring>
+		<reporttimestring>19-03-28 09:17:17</reporttimestring>
+		<attribute1>client_all_online_time</attribute1>
+		<attribute2/>
+		<cost1>0</cost1>
+		<cost2>0</cost2>
+		<cost3>0</cost3>
+		<cost4>0</cost4>
+	</node>
+	<node type='ReportEventNode' >
+		<index>5172</index>
+		<processID>11984</processID>
+		<time>1553739436</time>
+		<reporttime>1553739436</reporttime>
+		<extdata/>
+		<timestring>19-03-28 09:17:16</timestring>
+		<reporttimestring>19-03-28 09:17:16</reporttimestring>
+		<attribute1>float_monitor_show</attribute1>
+		<attribute2/>
+		<cost1>0</cost1>
+		<cost2>0</cost2>
+		<cost3>0</cost3>
+		<cost4>0</cost4>
+	</node>
+	<node type='ReportEventNode' >
+		<index>5155</index>
+		<processID>9748</processID>
+		<time>1553739436</time>
+		<reporttime>1553739436</reporttime>
+		<extdata>pannel=downloading,taskid=0</extdata>
+		<timestring>19-03-28 09:17:16</timestring>
+		<reporttimestring>19-03-28 09:17:16</reporttimestring>
+		<attribute1>dltab_detail_backstart_click</attribute1>
+		<attribute2/>
+		<cost1>0</cost1>
+		<cost2>0</cost2>
+		<cost3>0</cost3>
+		<cost4>0</cost4>
+	</node>
+	<node type='ReportEventNode' >
+		<index>5172</index>
+		<processID>11984</processID>
+		<time>1553739436</time>
+		<reporttime>1553739436</reporttime>
+		<extdata/>
+		<timestring>19-03-28 09:17:16</timestring>
+		<reporttimestring>19-03-28 09:17:16</reporttimestring>
+		<attribute1>float_monitor_hover_show</attribute1>
+		<attribute2/>
+		<cost1>0</cost1>
+		<cost2>0</cost2>
+		<cost3>0</cost3>
+		<cost4>0</cost4>
+	</node>
+	<node type='ReportEventNode' >
+		<index>5172</index>
+		<processID>11984</processID>
+		<time>1553739436</time>
+		<reporttime>1553739436</reporttime>
+		<extdata>time=0.41</extdata>
+		<timestring>19-03-28 09:17:16</timestring>
+		<reporttimestring>19-03-28 09:17:16</reporttimestring>
+		<attribute1>float_monitor_online_time</attribute1>
+		<attribute2/>
+		<cost1>0</cost1>
+		<cost2>0</cost2>
+		<cost3>0</cost3>
+		<cost4>0</cost4>
+	</node>
+</root>

@@ -1,0 +1,19 @@
+{
+    "dconf" : 
+    {
+        "version" : 87
+    },
+    "log_report" : 
+    {
+        "ip_list" : 
+        [
+            "153.37.171.105",
+            "61.155.183.108",
+            "223.111.209.155"
+        ]
+    },
+    "router" : 
+    {
+        "gateway_address" : "pc.gw.xnet.sandai.net:80"
+    }
+}

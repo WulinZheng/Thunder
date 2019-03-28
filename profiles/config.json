@@ -1,0 +1,121 @@
+{
+  "book-marks-section": {
+    "book-marks-key": "/"
+  },
+  "ConfigNet": {
+    "ConfigNet_Type": "1",
+    "ConfigNet_IdleDownload": false
+  },
+  "FlowMonitor": {
+    "DownloadSize": 2067797384,
+    "UploadSize": 35369535,
+    "Date": "2019.3.28"
+  },
+  "Bookmark": {
+    "ShowBookmarkBar": false
+  },
+  "BossKey": {
+    "BossKeyState": false,
+    "BossKeySwitch": false
+  },
+  "TaskDefaultSettings": {
+    "InitPath": "D:\\迅雷下载",
+    "DefaultPath": "D:\\迅雷下载",
+    "NewTaskStartMode": 1,
+    "UseLastCatalog": true
+  },
+  "ConfigFetchInterface": {
+    "TestServer": 0
+  },
+  "Consumption": {
+    "ShowMainWindowTime": 1553739430528,
+    "HideMainWindowTime": 1553739435792
+  },
+  "DiskCache": {
+    "DiskCacheSelect": 256
+  },
+  "ConfigNormalSession": {
+    "ConfigNormal_MaxRunningTaskCount": 5,
+    "ConfigNormal_AutoRun": true,
+    "ConfigNormal_AutoStartUnFinishedTask": false,
+    "ConfigNormal_AutoDeleteNotExistFile": false
+  },
+  "ConfigNoLimitDownload": {
+    "TaskCountAutoAdd": false,
+    "OpenNoLimitDownload": false
+  },
+  "BtGenericSettings": {
+    "AssocTorrent": true
+  },
+  "GenericSettings": {
+    "CheckCpu": 1,
+    "AnimationLevel": "0"
+  },
+  "Motitor": {
+    "MotitorIE浏览器": 1
+  },
+  "BirdKeyVest": {
+    "vestURL": [],
+    "commonUrl": []
+  },
+  "DownloadAndPlay": {
+    "EnableIPC": true
+  },
+  "Skin": {
+    "DisableSpringFestivalSkin": false,
+    "ClickTag": 1553739165106,
+    "selectSkinId": []
+  },
+  "TaskList": {
+    "CategoryViewId1_SortAttr": -10,
+    "CategoryViewId1_SortState": -1,
+    "CategoryViewId2_SortAttr": -10,
+    "CategoryViewId2_SortState": -1,
+    "CategoryViewId3_SortAttr": -10,
+    "CategoryViewId3_SortState": -1
+  },
+  "ConfigSuspension": {
+    "SuspensionX": 1274,
+    "SuspensionY": 211
+  },
+  "ConfigFloatPanel": {
+    "ConfigFloatPanelShowSpeedType": "0",
+    "FloatPanelValue": "0"
+  },
+  "VipDownload": {
+    "LastTryEnterTime": 1553739109
+  },
+  "Install": {
+    "PersonalUid": ""
+  },
+  "Monitor": {
+    "MonitorClipBoard": true
+  },
+  "ThunderFirstInstall": {
+    "IsFirstInstall": 1
+  },
+  "PathAndCategory": {
+    "historyDownloadPaths": [
+      "D:\\迅雷下载"
+    ],
+    "LastUsedPath": "D:\\迅雷下载"
+  },
+  "MoveToDir": {
+    "LatestSavePath": []
+  },
+  "ConfigMsg": {
+    "ConfigMsg_DeleteFile": true
+  },
+  "UserCommunitySet": {
+    "radio_id_729500818": "1"
+  },
+  "TaskUpgrading": {
+    "UpgradedUsers": "729500818, "
+  },
+  "sign": {
+    "getQuestionTime": "2019328"
+  },
+  "XLUpdate": {
+    "ShowMainUpdateIcon": false
+  }
+}
