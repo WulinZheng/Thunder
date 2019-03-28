@@ -7,8 +7,8 @@
     "ConfigNet_IdleDownload": false
   },
   "FlowMonitor": {
-    "DownloadSize": 2067797384,
-    "UploadSize": 35369535,
+    "DownloadSize": 3785414788,
+    "UploadSize": 59594794,
     "Date": "2019.3.28"
   },
   "Bookmark": {
@@ -22,14 +22,17 @@
     "InitPath": "D:\\迅雷下载",
     "DefaultPath": "D:\\迅雷下载",
     "NewTaskStartMode": 1,
-    "UseLastCatalog": true
+    "UseLastCatalog": true,
+    "NewTaskDlgWithoutMainWnd": true,
+    "OrignHostThreads": 5,
+    "OpenSilenceDownload": 0
   },
   "ConfigFetchInterface": {
     "TestServer": 0
   },
   "Consumption": {
-    "ShowMainWindowTime": 1553739430528,
-    "HideMainWindowTime": 1553739435792
+    "ShowMainWindowTime": 1553740559739,
+    "HideMainWindowTime": 1553739990277
   },
   "DiskCache": {
     "DiskCacheSelect": 256
@@ -59,7 +62,8 @@
     "commonUrl": []
   },
   "DownloadAndPlay": {
-    "EnableIPC": true
+    "EnableIPC": true,
+    "LanuchMediaPlayer": "0"
   },
   "Skin": {
     "DisableSpringFestivalSkin": false,
@@ -96,15 +100,17 @@
   },
   "PathAndCategory": {
     "historyDownloadPaths": [
-      "D:\\迅雷下载"
+      "D:\\迅雷下载",
+      "C:\\Users\\IVS\\Desktop"
     ],
-    "LastUsedPath": "D:\\迅雷下载"
+    "LastUsedPath": "C:\\Users\\IVS\\Desktop"
   },
   "MoveToDir": {
     "LatestSavePath": []
   },
   "ConfigMsg": {
-    "ConfigMsg_DeleteFile": true
+    "ConfigMsg_DeleteFile": true,
+    "ConfigMsg_FailSuggest": true
   },
   "UserCommunitySet": {
     "radio_id_729500818": "1"
