@@ -1,0 +1,73 @@
+﻿<XLI18NPackage>
+	<stringTable>
+		<string id="ID_USER_PANEL_LOGOUT_HINT">您没有登录，请先进行登录！</string>
+		
+		<string id="ID_USER_PANEL_LOGOUT_HINT">您的迅雷还没登录</string>
+		<string id="ID_USER_PANEL_CANCEL_LOGINING">取消</string>
+		<string id="ID_USER_PANEL_LOGINING_HINT">正在登录中......</string>
+		<string id="ID_USER_PANEL_RETRY_LOGIN_HINT">连接失败，20秒后重连</string>
+		
+		<string id="ID_USER_PANEL_USERNAME_WRONG">您的帐号输入错误，请核对后再次输入！</string>
+		<string id="ID_USER_PANEL_PASSWORD_WRONG">您的密码输入错误，请核对后再次输入！</string>
+		<string id="ID_USER_PANEL_NETWORK_ERROR">网络错误，请稍候再试！</string>
+		<string id="ID_USER_PANEL_KICKED_OUT">您的帐号已在别处登录！</string>
+		
+		<string id="ID_USERINFO_PANEL_HINT">点击进入个人中心查看更多</string>
+		<string id="ID_USERINFO_PANEL_YOUR_GLOBAL_RANK">你的全球排名为</string>
+		<string id="ID_USERINFO_PANEL_GLOBAL_RANK">全球排名</string>
+
+		<string id="ID_XLUSER_LOGIN_DLG">迅雷用户登录</string>
+		<string id="ID_XUNLEI_USER">迅雷帐号:</string>
+		<string id="ID_XUNLEI_PWD">迅雷密码:</string>
+		<string id="ID_IS_AUTO_LOGIN">记住密码</string>
+		<string id="ID_FORGET_PWD">忘记密码</string>
+		<string id="ID_SINGUP">注册帐号</string>
+		<string id="ID_LOGINDLG_IDOK">登录</string>
+		<string id="ID_IDCANCEL">取消</string>
+		<string id ="ID_REGISTER_ACCOUNT">注册帐号</string>
+
+		<string id="ID_LOGINTIP_DLG">提示</string>
+		<string id="ID_TIPTEXT">您没有登录!</string>
+		<string id="ID_TIPTEXT2">请先登录迅雷帐号!</string>
+
+		<string id="ID_LOGINMESSAGEBOX_DLG">登录提示</string>
+		<string id="ID_MESSAGEBOX_TIP">未初始化XLCP,无法登录</string>
+
+		<string id="IDS_TOOLBAR_LOGIN">登录</string>
+		<string id="IDS_MENU_LOGIN_TIP">登录</string>
+		<string id="IDS_TOOLBAR_LOGOUT">注销</string>
+		<string id="IDS_MENU_LOGOUT_TIP">注销</string>
+		<string id="IDS_PUBLISH_RES">资源</string>
+		<string id="IDS_PUBLISH_RES_LIST">查看资源列表</string>
+		<string id="IDS_MENU_LOGIN">登录...</string>
+		<string id="IDS_MENU_LOGOUT">注销</string>
+		<string id="IDS_MENU_AUTOLOGIN">自动登录</string>
+		<string id="IDS_MENU_AUTOLOGIN_TIP">下次启动时自动登录到雷区</string>
+		<string id="IDS_MENU_CHANGE_PWD">修改密码...</string>
+		<string id="IDS_MENU_CHANGE_PWD_TIP">修改密码</string>
+		<string id="IDS_MENU_CHANGE_INFO">修改个人资料...</string>
+		<string id="IDS_MENU_CHANGE_INFO_TIP">修改个人资料</string>
+		<string id="IDS_MENUITEM_BLOGMAIN">博客资源</string>
+		<string id="IDS_MENUITEM_TIP_BLOGMAIN">收藏/查看博客资源</string>
+		
+		<string id="IDS_MENU_REGISTER">注册帐号</string>
+		<string id="IDS_PWD_PROTECTION">密码保护</string>
+		<string id="IDS_REGISTER_VIP">升级至VIP会员</string>
+		<string id="IDS_VIP_PRIORITY">会员特权</string>
+		
+		
+		<string id="MUTUAL_COLUMN_COLLECT">收藏</string>
+		<string id="MUTUAL_COLUMN_VIEW">查看</string>
+		<string id="MUTUAL_COLUMN_PUBLISH">发布</string>
+		<string id="MUTUAL_COLUMN_COMMENT">评论</string>
+		<string id="MUTUAL_COLUMN_TITLE">社区互动</string>
+		<string id="MUTUAL_COLUMN_COLLECT_TO_BLOG">收藏到博客</string>
+		<string id="MUTUAL_COLUMN_VIEW_BLOG_RES">查看博客资源</string>
+		<string id="MUTUAL_COLUMN_VIEW_RES_COMMENT">查看资源评论</string>
+		<string id="MUTUAL_COLUMN_PUBUSH_TO_ONLINE">发布到迅雷在线</string>
+
+		<string id="IDS_TAB_PANEL_USERINFO">用户信息</string>
+		<string id="IDS_TAB_PANEL_BLOG">收藏</string>
+		<string id="IDS_TAB_PANEL_VIP">会员</string>
+	</stringTable>
+</XLI18NPackage>

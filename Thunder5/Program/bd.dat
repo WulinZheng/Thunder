@@ -1,0 +1,15 @@
+[bandwidth_detect]
+statistic_port=8080
+statistic_server=bwcheck.sandai.net
+stronglink_port=8000
+stronglink_server=bwcheck.sandai.net
+
+[detect_result]
+download_speed=178
+last_user_speed=0
+user_download_speed_max=0
+
+[detect_time]
+detect_interval=168
+last_detect_time=1518043778
+

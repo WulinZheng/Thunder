@@ -1,0 +1,510 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>雷区</title>
+<link href="http://wstatic.xunlei.com/css/txt.css" rel="stylesheet" type="text/css">
+<script src="http://wstatic.xunlei.com/js/G.js"></script>
+<script src="http://my.xunlei.com/webthunder_publish.js"></script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+-->
+</style>
+</head>
+<body bottommargin="0" topmargin="0" leftmargin="0" scroll="no" onLoad="onBodyLoaded()">
+<script language="javascript">
+if (location.href.indexOf("http://") != -1) 
+    document.domain = "xunlei.com";
+var g_bIfCommit=false;
+var g_iResType = -1;
+var g_iSubType;
+g_arrType = ["原创音乐", "游戏娱乐", "精品软件", "书籍杂志", "影视动画", undefined, "手机时尚"];
+g_arrResType = 
+    [   ["流行音乐", "华语音乐", "欧美音乐", "日韩音乐", "其它音乐", "流行MTV"],    
+        ["游戏娱乐", "网络游戏", "单机游戏", "游戏视频", "FLASH游戏", "游戏补丁", "掌上游戏"],
+        ["精品软件", "系统工具", "网络软件", "应用软件", "图像多媒体", "病毒防治", "其它软件", "硬件驱动"],
+        ["书籍杂志", "外语教材", "计算机类", "网络小说", "电子杂志", "其它文档"],
+        ["影视动画", "视频短片", "精彩电影", "电视剧集", "卡通动漫", "体育节目", "综艺节目", "相声小品", "FLASH短片", "电影片花"],
+        [],
+        ["手机时尚", "软件驱动", "手机电影", undefined, undefined, "手机游戏", "铃声音乐", "手机书籍"]
+
+    ];
+g_arrTitle = ["音乐名和歌手名", "文件名称", "软件名称", "文件名称", "短片名称", "", "文件名称"];
+g_arrSummary = 
+    [   "尽量填写详细的音乐、文件名称和该资源的描述，例如文件中（英）文名、歌词、歌手、发行日期、内容介绍等。",
+        "尽量填写详细的游戏标题和资源描述，例如文件中（英）文名、游戏版本号、游戏平台、使用感受等。",
+        "尽量填写该软件介绍、资源介绍、使用感受等。",
+        "尽量填写详细的书籍杂志标题和该资源的描述，例如文件中（英）文名、作者、发布日期、简要内容或读后感受等。",
+        "尽量填写详细的作品名称和该资源的描述，例如文件中（英）文名、导演、发行日期、故事背景、简要剧情等。",
+        "",
+        "尽量填写详细的资源名称和该资源的描述，例如文件中（英）文名、支持手机型号、内容介绍、尺寸大小等。"
+    ];  
+g_arrTagTip = 
+    [   "音乐的标签范例：",
+        "游戏的标签范例：",
+        "软件的标签范例：",
+        "书籍的标签范例：",
+        "视频的标签范例：",
+        "",
+        "手机的标签范例："
+    ];
+g_arrTagSample = 
+    [   "如“发如雪”的标签应为：发如雪、周杰伦。", 
+        "如“魔兽世界”的标签应为：魔兽世界、暴雪。", 
+        "如“QQ”的标签应为：QQ、网络聊天。", 
+        "如“水浒”的标签应为：施耐庵。", 
+        "如“霍元甲片花”的标签应为：霍元甲、李连杰、于仁泰。",
+        "",
+        "如“猫和老鼠08-3gp”的标签应为：猫和老鼠、手机电影。"
+    ]
+    /*
+1。sis  jar  jad  umd 3gp mp4等格式只能发布到：手机
+2。EXE可发布到：软件，文档，游戏，手机
+3。RAR 可发布全部类别
+4。 SWF 只能发布到：游戏 ，短片
+5。mp3,wma只能发布到音乐
+6。wmv,mpg,rmvb,avi只能发布到音乐，游戏，电影，文档
+
+    */
+g_oFormatMap = 
+    {   
+        exe:[1, 2, 3, 6], 
+        mov:[4], avi:[0, 1, 4], wmv:[0, 1, 4], rmvb:[0, 1, 4],
+        mp3:[0], wma:[0], wav:[0], vqf:[0],
+        chm:[3], doc:[3], pdf:[3], txt:[3],
+        asf:[0, 4], mpeg:[0, 4], mpg:[0, 1, 4], rm:[0, 4],  mpeg4:[0, 4],
+        jar:[6], jad:[6], sis:[6], threegp:[6], umd:[6], mp4:[6],
+        swf:[1, 4], torrent:[0,1,2,3,4,5,6],
+        //禁止发布的文件格式
+        bin:[], dll:[], bat:[], ini:[], asp:[], php:[], jsp:[], htm:[], html:[], shtml:[], jpg:[], 
+        jpeg:[], png:[], gif:[]
+    };
+
+//禁止用户输入的标点符号与特殊符号
+g_strSymbol = "!\"#$%&'()*,/:;<=>?@[\\]^_`{|}~";
+function initForm()
+{var format = document.getElementById("fileSuffix").value;
+    var arrType = g_oFormatMap[format.toLowerCase()];             
+    if(arrType == undefined)
+        return;
+        
+    var oResType = document.form1.txtResType;
+    for (var i=0; i<oResType.length; i++)
+    {
+        oResType[i].disabled = true;
+        for (var j=0; j<arrType.length; j++)
+        {
+            if (oResType[i].value == arrType[j])
+            {
+                oResType[i].disabled = false;
+                if (arrType.length == 1)
+                {
+                    oResType[i].checked = true;
+                    changeType();
+                }
+                break;  
+            }
+        }
+    }
+    
+    if (arrType.length == 0 
+        ||(document.form1.torrent.value == "1" && format.toLowerCase() != "torrent")  //一般bt文件后缀必须是torrent才可以发布
+        ||(document.form1.torrent.value != "1" && format.toLowerCase() == "torrent")) //bt种子不可以发布
+    {
+        document.body.bgColor = "#FFFDE4";
+        document.body.innerHTML = "<br><br><p align=center><font size=2 color=blue>抱歉！该类型文件不能发布到迅雷！谢谢您对迅雷的支持和厚爱。<br />欢迎访问<a href='http://www.xunlei.com' target='_blank'>迅雷在线</a>获取更多精彩资源。</font>";
+    }
+}
+
+function resetForm()
+{
+    var oSubType = document.form1.txtSubType;
+    for (var i=oSubType.length-1; i>0; i--)
+        oSubType.options.remove(i);
+    g_iResType = -1;
+    document.form1.reset();
+}
+
+function dispUrl(myurl)
+{       
+    if(StrLenOfAscii(myurl) > 40)
+        document.write(myurl.substring(0,35)+"...");
+    else    
+        document.write(myurl);      
+}
+
+function changeType()
+{
+    var i;
+    var oResType = document.form1.txtResType;
+    var oSubType = document.form1.txtSubType;
+    for (i=0; i<oResType.length; i++)
+    {
+        if (oResType[i].checked)
+            break;
+    }
+    if (g_iResType == parseInt(oResType[i].value))
+        return;
+    g_iResType = parseInt(oResType[i].value);
+    for (i=oSubType.length-1; i>0; i--)
+        oSubType.options.remove(i);
+    for (i=1; i<g_arrResType[g_iResType].length; i++)
+        if( g_arrResType[g_iResType][i] != undefined) oSubType.options.add(new Option(g_arrResType[g_iResType][i], i));
+    
+    oSubType.selectedIndex = g_arrResType[g_iResType].length == 1 ? 1 : 0;
+    if(form1.txtTitle.value == "" || !checkTitle())
+    {
+        form1.txtTitle.style.color = "#666666";
+        form1.txtTitle.value = g_arrTitle[g_iResType];
+    }
+    if(form1.txtSummary.value == "" || !checkSummary())
+    {
+        form1.txtSummary.style.color = "#666666";
+        form1.txtSummary.value = g_arrSummary[g_iResType];
+    }
+    document.getElementById("tagTip").innerHTML = "<span class='normal'>&nbsp;"
+                    +g_arrTagTip[g_iResType]+"</span><br>&nbsp;"+g_arrTagSample[g_iResType];
+}
+
+function checkTitle()
+{
+    bTitle = true;
+    for(var i=0; i<5; i++)
+    {
+        if(form1.txtTitle.value == g_arrTitle[i])
+        {
+            bTitle = false;
+            break;
+        }
+    }   
+    return bTitle;
+}
+
+function checkSummary()
+{
+    bSummary = true;
+    for(var i=0; i<5; i++)
+    {
+        if(form1.txtSummary.value == g_arrSummary[i])
+        {
+            bSummary = false;
+            break;
+        }
+    }   
+    return bSummary;
+}
+
+function setFileName()
+{
+    form1.txtTitle.style.color = "";
+    if (form1.torrent.value != 1 )
+    {
+        var iExtPos = form1.fileName.value.lastIndexOf(".");
+        form1.txtTitle.value = iExtPos != -1 ? form1.fileName.value.substring(0, iExtPos) : form1.fileName.value;
+    }
+    else
+    {
+        form1.txtTitle.value = form1.fileName.value;
+    }
+}
+
+function myfunc()
+{
+    if(g_bIfCommit)
+    {
+        alert("系统处理中，请您稍后！");
+        return ;
+    }   
+    if (g_iResType == -1)
+    {
+        alert("请选择一个类别");
+        if(!form1.txtResType[0].disabled)
+            form1.txtResType[0].focus();
+        return;
+    }
+    if(form1.txtSubType.length == 1)
+    {
+        alert("抱歉！该类型文件错误，无法发布！");
+        return;
+    }
+    if(form1.txtSubType.selectedIndex == 0)
+    {
+        alert("请选择一个子类别");
+        form1.txtSubType.focus();
+        return;
+    }       
+
+    if ( g_iResType == 6 && parseInt(form1.txtSubType.selectedIndex) > 2)
+        form1.txtType.value = (form1.txtSubType.selectedIndex + 2)*100 + g_iResType;
+    else
+        form1.txtType.value = form1.txtSubType.selectedIndex*100 + g_iResType;
+
+    form1.txtTitle.value = Trim(form1.txtTitle.value);
+    form1.txtSummary.value = Trim(form1.txtSummary.value);
+    form1.txtKeyword1.value = Trim(form1.txtKeyword1.value);
+    form1.txtKeyword2.value = Trim(form1.txtKeyword2.value);
+    form1.txtKeyword3.value = Trim(form1.txtKeyword3.value);
+
+    if (form1.fileUrl.value == "" && form1.torrent.value == "1")
+    {
+        var cid = form1.fileCid.value;
+        form1.fileUrl.value = "http://torrent.xunlei.com/" + cid.substr(0,2) + "/" + cid + ".torrent";
+    }
+
+    if(form1.fileUrl.value == "" || form1.fileSize.value == "" || form1.txtTitle.value == "" 
+     || form1.txtSummary.value == "" || form1.txtKeyword1.value == "" && form1.txtKeyword2.value == ""
+      && form1.txtKeyword3.value == "")
+    {
+        alert("应填写项不能为空"); 
+        form1.txtTitle.focus();
+        return;
+    }
+    if(!checkTitle())
+    {
+        alert("请输入资源标题");
+        form1.txtTitle.focus();
+        return;
+    }       
+    if(!checkSummary())
+    {
+        alert("请输入资源描述");
+        form1.txtSummary.focus();
+        return;
+    }
+    
+    if(StrLenOfAscii(form1.txtTitle.value) < 2 )
+    {
+        alert("标题不能少于2个字节");
+        form1.txtTitle.focus();
+        return;
+    }           
+    if(StrLenOfAscii(form1.txtTitle.value) > 40 )
+    {
+        alert("标题不能超过40个字节");
+        form1.txtTitle.focus();
+        return;
+    }   
+    
+    if(StrLenOfAscii(form1.txtSummary.value) > 2000)
+    {
+        alert("描述不能超过2000个字节");
+        form1.txtSummary.focus();
+        return;
+    }
+    
+    var oValid; 
+    oValid = ValidateInput(form1.txtTitle.value, true, false, "标题");
+    if (!oValid.valid)
+    {
+        alert(oValid.info);
+        form1.txtTitle.focus();
+        return;
+    }    
+    oValid = ValidateInput(form1.txtSummary.value, true, true, "描述");
+    if (!oValid.valid)
+    {
+        alert(oValid.info);
+        form1.txtSummary.focus();
+        return;
+    }    
+    
+    var oKeywords = {};
+    for (var i=1; i<4; i++)
+    {
+        var sTag = form1["txtKeyword"+i].value;
+        if (sTag == "")
+            continue;
+        //标签是否合法  
+        oValid = ValidateTag(sTag);
+        if (!oValid.valid)
+        {
+            alert(oValid.info);
+            form1["txtKeyword"+i].focus();
+            return;
+        }       
+        //标签是否重复
+        if (oKeywords[sTag] != undefined)
+        {
+            alert("请不要输入重复的标签");
+            form1["txtKeyword"+i].focus();
+            return;
+        }
+        oKeywords[sTag] = sTag;         
+    }
+        
+        
+    form1.method = "post";
+    form1.action = "http://publish.xunlei.com/cgi-bin/publish";
+    form1.submit();
+    g_bIfCommit = true;
+}
+function onBodyLoaded()
+{
+    td_temp_txtSummary = "";
+    document.form1.txtSummary.value = td_temp_txtSummary;
+    if (top.location.href.indexOf("my.xunlei.com") != -1)
+    {
+        initialize_webthunder_publish();
+    }
+    initForm();
+}
+function gotoSearch(){
+if (document.all.txtTitle.value) 
+    window.open('http://wstatic.xunlei.com/client/redirect.htm?'+document.all.txtTitle.value,'_blank');
+else
+    alert('资源标题不能为空');
+}
+</script>
+<form name="form1">
+<input type="hidden" name="fileUrl" value=td_temp_fileUrl>
+<input type="hidden" name="pageUrl" value=td_temp_pageUrl>
+<input type="hidden" name="fileName" value="td_temp_fileName">
+<input type="hidden" name="fileSize" value="td_temp_fileSize">
+<input type="hidden" name="fileSuffix" value="td_temp_fileSuffix">
+<input type="hidden" name="fileCid" value="td_temp_fileCid">
+<input type="hidden" name="speed" value="td_temp_speed">
+<input type="hidden" name="resCount" value="td_temp_res_count">
+<input type="hidden" name="serverResCount" value="td_temp_server_res_count">
+<input type="hidden" name="peerResCount" value="td_temp_peer_res_count">
+<input type="hidden" name="gcid" value="td_temp_gcid">
+<input type="hidden" name="remark" value="td_temp_remark">
+<input type="hidden" name="torrent" value="td_temp_torrent">
+<input type="hidden" name="btfile" value="td_temp_btfile">
+<input type="hidden" name="peerId" value="td_temp_peerID">
+<table width="400" border="0" cellpadding="0" cellspacing="0"  bgcolor="FFFDE4" align="center" class="normal">
+  <!--DWLayoutTable-->
+      <tr>
+        <td width="15">&nbsp;</td>
+        <td width="368" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <!--DWLayoutTable-->
+          <tr>
+            <td width="368" height="29" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <!--DWLayoutTable-->
+                <tr>
+                  <td width="104" height="29" valign="bottom" class="normal"> &nbsp;资源发布提交：</td>
+                  <td width="264" valign="bottom"><div align="right"><span class="normal"><a tabindex="11" href="http://wstatic.xunlei.com/web/example.htm" target="_blank" class="xblue_12a">发布范例</a></span></div></td>
+                </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="7" valign="top" class="tdLine_7_b">&nbsp;&nbsp;</td>
+          </tr>
+          <tr>
+            <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <!--DWLayoutTable-->
+                <tr>
+                  <td height="24" valign="bottom"><div align="center" class="normal">文件大小</div></td>
+                  <td valign="bottom" class="grey_1">td_temp_fileSize</td>
+                  <td valign="bottom"><span class="normal">&nbsp;文件格式</span></td>
+                  <td valign="bottom" class="grey_1">td_temp_fileSuffix</td>
+                </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="8" valign="top" class="tdLine_7_b">&nbsp;&nbsp;</td>
+          </tr>
+          <tr>
+            <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="368" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="60" height="28" valign="middle" class="normal" align="center">资源标题</td>
+                        <td width="204" valign="middle"><input name="txtTitle" type="text" style="color:#666666" class="table" tabindex="1" value="" size="30" maxlength="40" 
+                        onFocus="this.style.color='';if(!checkTitle()) this.value=''"></td>
+                        <td width="104"><a href="javascript:setFileName()" title="点击自动获取文件名" class="blue">自动获取文件名</a></td>
+                      </tr>
+                      <tr>
+                        <td height="28" colspan="3" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td width="72%" valign="middle" height="28" >
+                                  <input type="radio" name="txtResType" value="4" onClick="changeType()">影视 
+                                  <input type="radio" name="txtResType" value="0" onClick="changeType()">音乐 
+                                  <input type="radio" name="txtResType" value="1" onClick="changeType()">游戏 <br>
+                                  <input type="radio" name="txtResType" value="2" onClick="changeType()">软件 
+                                  <input type="radio" name="txtResType" value="3" onClick="changeType()">书籍
+                                  <input type="radio" name="txtResType" value="6" onClick="changeType()">手机
+                                </td>
+                                  <td width="28%" align="center" class="normal" valign="middle">
+                                  <select tabindex="2" name="txtSubType" size="1" class="table">
+                                  <option selected>请选择类型 </option>
+                                  </select>     
+                                  <input type="hidden" name="txtType" value="" />                         
+                                  </td>
+                              </tr>
+                        </table></td>
+                      </tr>
+                      <tr>
+                        <td height="1"></td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">&nbsp;资源描述</td>
+                      </tr>
+                      <tr>
+                        <td colspan="3" valign="top" align="center"><textarea tabindex="3" name="txtSummary" cols="50" rows="3" wrap="PHYSICAL" style="color:#666666;width:350px;" class="table" 
+                        onFocus="this.style.color='';if(!checkSummary()) this.value=''"></textarea></td>
+                      </tr>
+                      <tr>
+                        <td height="5"></td>
+                      </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td height="28" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <!--DWLayoutTable-->
+          <tr>
+            <td id="tagTip" width="368" height="42" valign="bottom" class="normal STYLE1"><span class="normal">&nbsp;资源标签提示：</span><br>
+&nbsp;标签为该资源的关键词，规范填写有助于被更多用户检索到！</td>
+            </tr>
+                      <tr>
+                        <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="60" height="28" valign="middle"><div align="center" class="normal"><a tabindex="12" href="http://wstatic.xunlei.com/web/example.htm" target="_blank" class="xblue_12a" title="资源标题和资源描述中的关键字、词等">资源标签</a></div></td>
+                            <td width="80" valign="middle"><input tabindex="4" name="txtKeyword1" type="text" class="table" size="10" maxlength="20"></td>
+                            <td width="80" valign="middle"><input tabindex="5" name="txtKeyword2" type="text" class="table" size="10" maxlength="20"></td>
+                            <td width="108" valign="middle"><input tabindex="6" name="txtKeyword3" type="text" class="table" size="10" maxlength="20"></td>
+                            <td width="40">&nbsp;</td>
+                          </tr>
+                        </table>
+                        </td>
+                      </tr>
+                  </table></td>
+                </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="7" valign="top" class="tdLine_7_b">&nbsp;&nbsp;</td>
+          </tr>
+          <tr>
+            <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="368" height="23" valign="middle" class="normal"><span class="normal">&nbsp;提醒:请勿发布非法资源,具体请参阅 <a tabindex="13" href="http://wstatic.xunlei.com/web/protocol.htm" target="_blank" class="xblue_12a">雷区公约</a></span></td>
+                </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="7" valign="top" class="tdLine_7_b">&nbsp;&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="28" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <!--DWLayoutTable-->
+                <tr>
+                  <td width="81" height="28" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+              <td width="88" valign="middle"><div align="center"><img tabindex="9" src="http://wstatic.xunlei.com/images/tijiao_ok.gif" width="48" height="18" onclick="return myfunc();" onKeyDown=" if(window.event.keyCode == 13) myfunc();"></div></td>
+              <td width="81" valign="middle"><div align="center"><img tabindex="10" src="http://wstatic.xunlei.com/images/tijiao_reset.gif" width="48" height="18" onclick="resetForm();" onKeyDown=" if(window.event.keyCode == 13) resetForm();"></div></td>
+              <td width="66" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+            <td width="52">&nbsp;</td>
+                </tr>
+            </table></td>
+          </tr>
+             </table></td>
+        <td width="17">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="5"></td>
+        <td></td>
+        <td></td>
+      </tr>
+</table>
+</form>
+</body>

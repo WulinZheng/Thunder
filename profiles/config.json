@@ -1,14 +1,31 @@
 {
+  "Consumption": {
+    "ShowMainWindowTime": 1553753467762,
+    "HideMainWindowTime": 1553752753275
+  },
   "book-marks-section": {
     "book-marks-key": "/"
   },
   "ConfigNet": {
     "ConfigNet_Type": "1",
-    "ConfigNet_IdleDownload": false
+    "ConfigNet_IdleDownload": false,
+    "ConfigNet_OpenMirrorImageIncreaseSpeed": true,
+    "ConfigNet_OpenXunleiP2PIncreaseSpeed": true,
+    "ConfigNet_Custom_DownloadSpeedChk": true,
+    "ConfigNet_Custom_UploadSpeedChk": true,
+    "ConfigNet_Custom_MaxDownloadSpeed": "1024",
+    "ConfigNet_Custom_MaxUploadSpeed": "1024",
+    "ConfigNet_Custom_Time_Switch": false,
+    "ConfigNet_Custom_Time_Begin_Hour": "0",
+    "ConfigNet_Custom_Time_Begin_Minute": "0",
+    "ConfigNet_Custom_Time_End_Hour": "23",
+    "ConfigNet_Custom_Time_End_Minute": "59",
+    "ConfigNet_Custom_MaxDownloadSpeedTmp": 1024,
+    "ConfigNet_Custom_MaxUploadSpeedTmp": 1024
   },
   "FlowMonitor": {
-    "DownloadSize": 3785414788,
-    "UploadSize": 59594794,
+    "DownloadSize": 5179371112,
+    "UploadSize": 67289611,
     "Date": "2019.3.28"
   },
   "Bookmark": {
@@ -16,7 +33,8 @@
   },
   "BossKey": {
     "BossKeyState": false,
-    "BossKeySwitch": false
+    "BossKeySwitch": false,
+    "BossKeyName": "Alt+D"
   },
   "TaskDefaultSettings": {
     "InitPath": "D:\\迅雷下载",
@@ -25,14 +43,12 @@
     "UseLastCatalog": true,
     "NewTaskDlgWithoutMainWnd": true,
     "OrignHostThreads": 5,
-    "OpenSilenceDownload": 0
+    "OpenSilenceDownload": 0,
+    "OpenFile": false,
+    "AwayModeEnabled": false
   },
   "ConfigFetchInterface": {
     "TestServer": 0
-  },
-  "Consumption": {
-    "ShowMainWindowTime": 1553740559739,
-    "HideMainWindowTime": 1553739990277
   },
   "DiskCache": {
     "DiskCacheSelect": 256
@@ -41,21 +57,28 @@
     "ConfigNormal_MaxRunningTaskCount": 5,
     "ConfigNormal_AutoRun": true,
     "ConfigNormal_AutoStartUnFinishedTask": false,
-    "ConfigNormal_AutoDeleteNotExistFile": false
+    "ConfigNormal_AutoDeleteNotExistFile": false,
+    "ConfigNormal_AutoSlowTask2Tail": true
   },
   "ConfigNoLimitDownload": {
     "TaskCountAutoAdd": false,
-    "OpenNoLimitDownload": false
+    "OpenNoLimitDownload": false,
+    "TaskCountAutoAddRate": "100",
+    "NoLimitDownloadFileSize": "30"
   },
   "BtGenericSettings": {
-    "AssocTorrent": true
+    "AssocTorrent": true,
+    "AutoBTNewTask": true,
+    "ConfigBt_SetPortType": "0",
+    "ConfigBt_Manul_TcpPort": "15000"
   },
   "GenericSettings": {
     "CheckCpu": 1,
     "AnimationLevel": "0"
   },
   "Motitor": {
-    "MotitorIE浏览器": 1
+    "MotitorIE浏览器": 1,
+    "MotitorAll": 1
   },
   "BirdKeyVest": {
     "vestURL": [],
@@ -87,13 +110,18 @@
     "FloatPanelValue": "0"
   },
   "VipDownload": {
-    "LastTryEnterTime": 1553739109
+    "LastTryEnterTime": 1553752641
   },
   "Install": {
     "PersonalUid": ""
   },
   "Monitor": {
-    "MonitorClipBoard": true
+    "MonitorClipBoard": true,
+    "ShortcutMonitor": true,
+    "WatchTraditionLink": true,
+    "ConfigWatch_Bt": true,
+    "FilterSitesForUI": "\n*.mail.live.com\n*.mail.yahoo.com\n*.mail.qq.com\n*.mail.sohu.com\n*.mail.google.com\n*.sinamail.sina.com.cn\n*.mail.sina.com.cn\n*.mail.163.com\n*.mail.10086.cn\n*.www.126.com\n*.passport.alipay.com\n*.login.live.com\n*.mail.sogou.com\n*.web.mail.tom.com\n*.www.2980.com\n*.mail.21cn.com\n*.www.188.com\n*.yeah.net\n*.mail.wo.com.cn\n*.263.net\n*.ecitic.com\n*.pos.baidu.com",
+    "ExtendNames": ".asf;.avi;.exe;.iso;.mp3;.mpeg;.mpg;.mpga;.ra;.rar;.rm;.rmvb;.tar;.wma;.wmp;.wmv;.mov;.zip;.3gp;.chm;.mdf;.torrent;.jar;.msi;.arj;.bin;.dll;.psd;.hqx;.sit;.lzh;.gz;.tgz;.xlsx;.xls;.doc;.docx;.ppt;.pptx;.flv;.swf;.mkv;.tp;.ts;.flac;.ape;.wav;.aac;.txt;.dat;.7z;.ttf;.bat;.xv;.xvx;.pdf;.mp4;.apk;.ipa;.epub;.mobi;.deb;.sisx;.cab;.pxl;.xlb;"
   },
   "ThunderFirstInstall": {
     "IsFirstInstall": 1
@@ -110,10 +138,14 @@
   },
   "ConfigMsg": {
     "ConfigMsg_DeleteFile": true,
-    "ConfigMsg_FailSuggest": true
+    "ConfigMsg_FailSuggest": true,
+    "ConfigMsg_Finish": true,
+    "ConfigMsg_PlayWaveWhileFinish": true,
+    "ConfigMsg_WavePath": "D:\\ThunderX\\Program\\download-complete.wav"
   },
   "UserCommunitySet": {
-    "radio_id_729500818": "1"
+    "radio_id_729500818": "1",
+    "radio_id_": "1"
   },
   "TaskUpgrading": {
     "UpgradedUsers": "729500818, "
@@ -123,5 +155,22 @@
   },
   "XLUpdate": {
     "ShowMainUpdateIcon": false
+  },
+  "CopyToDir": {
+    "LatestSavePath": []
+  },
+  "Others": {
+    "AntiDisturb": true
+  },
+  "EMuleGenericSettings": {
+    "EMuleWatchLink": true
+  },
+  "MagnetGenericSettings": {
+    "MagnetWatchLink": true
+  },
+  "ConnectType": {
+    "ProxyName": [
+      "直接连接"
+    ]
   }
 }

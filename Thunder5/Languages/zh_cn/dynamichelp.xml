@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="GBK"?>
+<config type="addin" GUID="">
+
+<panel name="HintNeoimage" closetimeout="15" type="hint">
+	<paragraph left="10" span="0">
+		<elem type="label" text="推荐" />
+		<elem type="label" text="装机必备图像软件光影魔术手" color="205,51,0"/>
+		<elem type="label" text="，照片处理、个性艺术照轻松搞定，而且正版免费！已有"/>
+		<elem type="label" text="1000万人次以上" color="205,51,0"/>
+		<elem type="label" text="使用她，您也需要吗？"/>
+	</paragraph>
+	<paragraph left="150" span= "40">
+
+		<elem type="url_link" text="了解更多" color="204,51,0" hovercolor="204,51,0" url="http://mediapv.xunlei.com/fcg-bin/statextend?id=1284&amp;url=http://www.neoimaging.cn">
+			<icon name="neoimagemore"/>
+		</elem>
+	</paragraph>
+</panel>
+
+
+<panel name="HintWhenTaskCountOverTen" closetimeout="0" type="hint" font_style="normal">
+	<paragraph left="10" span="10">
+		<elem type="label" text="您已经有10个下载任务了，启动任务管理可以将“正在下载”和“已下载”的任务分类存放，方便您对任务的管理。" />
+	</paragraph>
+	<paragraph left="100" span="40">
+		<elem type="action_link"  text="启动任务管理" color="41,91,160" hovercolor="41,91,160" action="Application.ShowTaskManager">
+			<icon name="blue" pos="left"/>
+		</elem>
+		<elem type="url_link" text="了解更多" color="41,91,160" hovercolor="41,91,160" url="http://help.xunlei.com/online/morehelp.php?id=HintWhenTaskCountOverTen">
+			<icon name="orange" pos="left"/>
+		</elem>
+	</paragraph>
+</panel>
+<panel name="HintWhenOpenTaskManager" closetimeout="35" type="hint">
+	<paragraph left="10" span="0">
+		<elem type="label" text="您启动了"/>
+		<elem type="tip_link" color="0,0,204" hovercolor="0,0,204" text="任务管理" hint="任务管理功能可以将“已下载”的任务和“正在下载”的任务分类存放，方便您对任务的管理"/>
+		<elem type="label" text="功能，所有完成的下载任务被转移到“已下载”目录"/>
+	</paragraph>
+	<paragraph left="10" span= "40">
+		<elem type="checkbox" text="不再显示此提示"/>
+		<elem type="action_link" text="禁用任务管理" color="41,91,160" hovercolor="41,91,160" action="Application.HideTaskManager">
+			<icon name="blue"/>
+		</elem>
+		<elem type="url_link" text="了解更多" color="204,51,0" hovercolor="204,51,0" url="http://help.xunlei.com/online/morehelp.php?id=HintWhenOpenTaskManager">
+			<icon name="orange"/>
+		</elem>
+	</paragraph>
+</panel>
+
+
+<panel name="HintWhenHighSpeed" closetimeout="60" type="highspeed" font_style="normal">
+	<paragraph left="10" span="0">
+		<elem type="label" text="当前处于高速下载模式，可能影响网络游戏及网页浏览速度！" />
+		
+	</paragraph>
+	<paragraph left="10" span="40">
+		<elem type="checkbox" text="不再显示此提示"/>
+		<elem type="action_link" id=""  text="切换至智能限速模式" color="41,91,160" hovercolor="41,91,160" action="Application.ChangeToSpeedLimit" parameter="FromDynamicHelpPanel">
+			<icon name="blue" pos="left"/>
+		</elem>
+		<elem type="url_link" text="帮助" color="41,91,160" hovercolor="41,91,160" url="http://help.xunlei.com/00001/0000001045.html">
+			<icon name="orange" pos="left"/>
+		</elem>
+	</paragraph>
+</panel>
+
+<panel name="HintWhenChangeToSpeedLimit" closetimeout="60" type="limitspeed" font_style="normal">
+	<paragraph left="10" span="0">
+		<elem type="label" text="切换成功，已启用智能限速模式，为保障网页浏览，下载速度已受到限制。" />
+	</paragraph>
+	<paragraph left="80" span="40">
+		
+		<elem type="action_link" text="恢复至高速下载模式" color="41,91,160" hovercolor="41,91,160" action="Application.ChangeToHighSpeed" parameter="1">
+			<icon name="blue" pos="left"/>
+		</elem>
+		<elem type="url_link" text="帮助" color="41,91,160" hovercolor="41,91,160" url="http://help.xunlei.com/00001/0000001045.html">
+			<icon name="orange" pos="left"/>
+		</elem>
+	</paragraph>
+</panel>
+
+<panel name="HintWhenChangeToHighSpeed" closetimeout="60" type="highspeed" font_style="normal">
+	<paragraph left="10" span="0">
+		<elem type="label" text="切换成功，已恢复至高速下载模式。" />
+	</paragraph>
+	<paragraph left="80" span="40">
+		
+		<elem type="action_link" text="切换至智能限速模式" color="41,91,160" hovercolor="41,91,160" action="Application.ChangeToSpeedLimit" parameter="FromOther">
+			<icon name="blue" pos="left"/>
+		</elem>
+		<elem type="url_link" text="帮助" color="41,91,160" hovercolor="41,91,160" url="http://help.xunlei.com/00001/0000001045.html">
+			<icon name="orange" pos="left"/>
+		</elem>
+	</paragraph>
+</panel>
+
+
+
+
+<panel name="HintWhenFirstOpenFtpGlance" closetimeout="15" type="notify">
+	<paragraph left="10" span="0">
+		<elem type="label" text="FTP资源探测器可以访问以FTP形式提供下载的站点。" />
+	</paragraph>
+	<paragraph left="10" span="0">
+		<elem type="url_link" text="了解更多" color="41,91,160" hovercolor="41,91,160" url="http://help.xunlei.com/online/morehelp.php?id=HintWhenFirstOpenFtpGlance">
+			<icon name="blue" />
+		</elem>
+	</paragraph>
+</panel>
+<panel name="HintWhenTaskError" closetimeout="0" type="message">
+	<paragraph left="10" span="0">
+		<elem type="label" text="“{fullname}”下载失败，原因为："/>
+		<elem type="url_link" text="{error1} {error2}" color="0,0,204" hovercolor="0,0,204" hoverstyle="underline" url="http://help.xunlei.com/online/help.php?id={errorcode}&amp;ver={version}&amp;url={url}"/>
+	</paragraph>
+	<paragraph left="10" span="40">
+		<elem type="checkbox" text="不再显示此提示"/>
+		<elem type="url_link" text="解决办法" color="125,45,125" hovercolor="125,45,125" url="http://help.xunlei.com/online/help.php?id={errorcode}&amp;ver={version}&amp;url={url}">
+			<icon name="purple" />
+		</elem>
+		<elem type="action_link" text="修改属性" color="41,91,160" hovercolor="41,91,160" action="Application.ModifyTaskProperty" parameter="{taskid}">
+			<icon name="blue"/>
+		</elem>
+		<elem type="url_link" text="浏览引用页" color="204,51,0" hovercolor="204,51,0" url="{refurl}">
+			<icon name="orange"/>
+		</elem>
+	</paragraph>
+</panel>
+<panel name="HintWhenFirstTaskWait" closetimeout="15" type="notify">
+	<paragraph left="10" span="0">
+		<elem type="label" text="有任务处于等待状态"/>
+		<elem type="label" text="，您想修改“同时开始任务数”吗？">
+			<icon name="wait"/>
+		</elem>
+	</paragraph>
+	<paragraph left="300" span="0">
+		<elem type="action_link" text="修改" color="41,91,160" hovercolor="41,91,160" action="Application.ModifyTaskCount">
+			<icon name="blue"/>
+		</elem>
+	</paragraph>
+</panel>
+<panel name="HintWhenTaskCountOverTwenty" closetimeout="15" type="notify">
+	<paragraph left="10" span="0">
+		<elem type="label" text="是否觉得工具栏按钮太少呢？您需要配置工具栏吗？"/>
+	</paragraph>
+	<paragraph left="300"	span="40">
+		<elem type="action_link" text="配置工具栏" color="41,91,160" hovercolor="41,91,160" action="Application.ConfigToolBar">
+			<icon name="blue"/>
+		</elem>
+		<elem type="url_link" text="了解更多" color="204,51,0" hovercolor="204,51,0" url="http://help.xunlei.com/online/morehelp.php?id=HintWhenTaskCountOverTwenty">
+			<icon name="orange"/>
+		</elem>	
+	</paragraph>
+</panel>
+<panel name="HintWhenFinishShutdown" closetimeout="0" type="hint">
+	<paragraph left="10" span="0">
+		<elem type="label" text="您启动了“下载完成后关机”的功能，当所有下载任务都完成的时候计算机将会自动关闭。"/>
+	</paragraph>
+	<paragraph left="10" span="40">
+		<elem type="checkbox" text="不再显示此提示"/> 
+		<elem type="action_link" text="取消下载完成后关机" color="41,91,160" hovercolor="41,91,160" action="Application.CancelShutDown">
+			<icon name="blue"/>
+		</elem>
+		<elem type="url_link" text="了解更多" color="204,51,0" hovercolor="204,51,0" url="http://help.xunlei.com/online/morehelp.php?id=HintWhenFinishShutdown">
+			<icon name="orange"/>
+		</elem>
+	</paragraph>
+</panel>
+<panel name="HintWhenNoDataFromOrigin" closetimeout="15" type="message">
+	<paragraph left="10" span="0">
+		<elem type="label" text="“{filename}”的原始下载地址忙或者失效，迅雷"/>
+		<elem type="tip_link" text="从其他资源完成了下载" color="0,0,204" hovercolor="0,0,204" hint="由于没有从原始地址获得数据，该文件有可能不是您需要的文件，如果发生了这个问题，请右键点击该任务，选择“从原始地址重新下载”即可解决这个问题"/>
+	</paragraph>
+	<paragraph left="10" span="40">
+		<elem type="checkbox" text="不再显示此提示"/>
+		<elem type="url_link" text="了解更多" color="204,51,0" hovercolor="204,51,0" url="http://help.xunlei.com/online/morehelp.php?id=HintWhenNoDataFromOrigin">
+			<icon name="blue"/>
+		</elem>
+	</paragraph>
+</panel>
+<panel name="HintWhenStartSixTask" closetimeout="15" message="notify">
+	<paragraph left="10" span="0">
+		<elem type="label" text="您新建了下载任务，现在需要查看任务的"/>
+		<elem type="tip_link" text="连接信息" color="0,0,204" hovercolor="0,0,204" hint="选中开始状态的任务可以查看任务连接信息和原始地址每个线程的连接信息，点击任务前面的“+”，在展开的资源列表中选择一个资源，可以查看该资源每个线程的连接信息"/>
+		<elem type="label" text="吗？"/>
+	</paragraph>
+	<paragraph left="300" span="40">
+		<elem type="action_link" text="查看连接信息" color="41,91,160" hovercolor="41,91,160" action="Application.OpenConnectionInfo">
+			<icon name="blue"/>
+		</elem>
+		<elem type="url_link" text="了解更多" color="204,51,0" hovercolor="204,51,0" url="http://help.xunlei.com/online/morehelp.php?id=HintWhenStartSixTask">
+			<icon name="orange"/>
+		</elem>
+	</paragraph>
+</panel>
+<panel name="HintWhenTaskSuccessInTaskManager" closetimeout="15" type="hint">
+	<paragraph left="10" span="40">
+		<elem type="label" text="{filename}已经下载完成，并自动移动到“{categoryname}”分类。"/>
+	</paragraph>
+	<paragraph left="10" span="40">
+		<elem type="checkbox" text="不再显示此提示"/>
+		<elem type="action_link" text="打开文件" color="41,91,160" hovercolor="41,91,160" action="Application.OpenFile" parameter="{fullname}">
+			<icon name="blue"/>
+		</elem>
+		<elem type="action_link" text="查看类别" color="204,51,0" hovercolor="204,51,0" action="Application.OpenCategory" parameter="{categoryid}">
+			<icon name="orange"/>
+		</elem>
+	</paragraph>
+</panel>
+<panel name="HintWhenDeleteTaskToDustbin" closetimeout="15" type="hint">
+	<paragraph left="10" span="0">
+		<elem type="label" text="任务被删除到了迅雷的垃圾箱。"/>
+	</paragraph>
+	<paragraph left="10" span="40">
+		<elem type="checkbox" text="不再显示此提示"/>
+		<elem type="action_link" text="清空垃圾箱" color="41,91,160" hovercolor="41,91,160" action="Application.CleanDustbin">
+			<icon name="blue"/>
+		</elem>
+		<elem type="action_link" text="查看垃圾箱" color="204,51,0" hovercolor="204,51,0" action="Application.OpenDustbin">
+			<icon name="orange"/>
+		</elem>
+	</paragraph>
+</panel>
+<panel name="HintWhenAutoCorrect" closetimeout="15" type="hint">
+	<paragraph left="10" span="0">
+		<elem type="tip_link" color="0,0,204" hovercolor="0,0,204" text="纠错功能" hint="由于部分资源提供了错误的数据，在下载中可能会发生数据错误的情况，迅雷会自动对错误的数据进行纠错，所以会出现进度倒退的情况"/>
+		<elem type="label" text="生效，“{filename}”部分错误的数据将被删除并重新下载，此时下载进度会发生倒退。"/>
+	</paragraph>
+	<paragraph left="10" span="100">
+		<elem type="checkbox" text="不再显示此提示"/>
+		<elem type="url_link" text="了解更多" color="41,91,160" hovercolor="41,91,160" url="http://help.xunlei.com/online/morehelp.php?id=HintWhenAutoCorrect">
+			<icon name="blue"/>
+		</elem>
+	</paragraph>
+</panel>
+<panel name="HintWhenZeroSpeed" closetimeout="15" type="message">
+	<paragraph left="10" span="0">
+		<elem type="label" text="“{filename}”无法正常获得数据，您可以尝试："/>
+	</paragraph>
+	<paragraph left="10" span="40">
+		<elem type="checkbox" text="不再显示此提示"/>
+		<elem type="action_link" text="重新查询资源" color="41,91,160" hovercolor="41,91,160" action="Application.RequeryResource" parameter="{taskid}">
+			<icon name="blue"/>
+		</elem>
+		<elem type="url_link" text="求助" color="204,51,0" hovercolor="204,51,0" url="http://help.xunlei.com/online/morehelp.php?id=HintWhenZeroSpeed">
+			<icon name="orange"/>
+		</elem>
+	</paragraph>
+</panel>
+<panel name="HintWhenConnectHubTimeOut" closetimeout="0" type="message">
+	<paragraph left="10" span="0">
+		<elem type="label" text="迅雷无法正常工作，请确定您能够正常上网，并检查代理和防火墙设置。"/>
+	</paragraph>
+	<paragraph left="10" span="40">
+		<elem type="checkbox" text="不再显示此提示"/>
+		<elem type="url_link" text="防火墙帮助" color="41,91,160" hovercolor="41,91,160" url="http://help.xunlei.com/online/morehelp.php?id=HintWhenConnectHubTimeOut01">
+			<icon name="blue"/>
+		</elem>
+		<elem type="url_link" text="代理帮助" color="204,51,0" hovercolor="204,51,0" url="http://help.xunlei.com/online/morehelp.php?id=HintWhenConnectHubTimeOut02">
+			<icon name="orange"/>
+		</elem>
+		<elem type="url_link" text="求助" color="125,45,125" hovercolor="125,45,125" url="http://bbs.xunlei.com">
+			<icon name="purple"/>
+		</elem>
+	</paragraph>
+</panel>
+<panel name="HintWhenAllocDiskError" closetimeout="0" type="hint">
+	<paragraph left="10" span="0">
+		<elem type="label" text="“{fullname}”因为磁盘空间不足而创建失败，请清理磁盘空间或更改文件存放目录。"/>
+	</paragraph>
+	<paragraph left="10" span="40">
+		<elem type="checkbox" text="不再显示此提示"/>
+		<elem type="action_link" text="更改存放目录" color="41,91,160" hovercolor="41,91,160" action="Application.ModifyTaskProperty" parameter="{taskid}">
+			<icon name="blue"/>
+		</elem>
+	</paragraph>
+</panel>
+<panel name="HintWhenFinishSizeOverTen" closetimeout="0" type="notify">
+	<paragraph left="10" span="0">
+		<elem type="label" text="迅雷使用了"/>
+		<elem type="tip_link" text="磁盘缓存技术" color="0,0,204" hovercolor="0,0,204" hint="磁盘缓存机制就是下载的数据不直接写入硬盘，而是在内存中累计到一定的值后再一次性写入硬盘，这样就可以减少硬盘的读写次数，保护了硬盘。"/>
+		<elem type="label" text="，能够减少下载时对硬盘的读写次数，从而达到保护硬盘的目的。"/>
+	</paragraph>
+	<paragraph left="10" span="40">
+		<elem type="action_link" text="配置磁盘缓存" color="41,91,160" hovercolor="41,91,160" action="Application.ConfigCache">
+			<icon name="blue"/>
+		</elem>
+		<elem type="url_link" text="了解更多" color="204,51,0" hovercolor="204,51,0" url="http://help.xunlei.com/online/morehelp.php?id=HintWhenFinishSizeOverTen">
+			<icon name="orange"/>
+		</elem>
+	</paragraph>
+</panel>
+<panel name="HintWhenAutoDetectKillVirusSoft" closetimeout="0" type="notify">
+	<paragraph left="10" span="0">
+		<elem type="label" text="迅雷检测到您的系统安装了{antivirus}，文件下载完成后将会自动调用{antivirus}进行杀毒。"/>
+	</paragraph>
+</panel>
+<panel name="HintTestLink" closetimeout="0" type="message">
+	<paragraph left="10" span="0">
+		<elem type="label" text="祝贺您成功安装了迅雷，请点击下面的“下载测试”按钮进行下载测试，确认迅雷能否正常工作！"/>
+	</paragraph>
+	<paragraph left="10" span="0">
+		<elem type="action_link" text="下载测试" color="41,91,160" hovercolor="41,91,160" action="Application.TestLink">
+			<icon name="blue"/>
+		</elem>
+	</paragraph>
+</panel>
+<panel name="HintExeFile" closetimeout="15" type="hint">
+	<paragraph left="10" span="0">
+		<elem type="label" text="您下载的是可执行文件，里面可能捆绑有恶意软件，建议您使用360安全卫士查杀误装的恶意软件。"/>
+	</paragraph>
+	<paragraph left="10" span="0">
+		<elem type="url_link" text="立即安装360安全卫士" color="41,91,160" hovercolor="41,91,160" url="http://app02.sandai.net/count4u/click.php?key=2">
+			<icon name="blue"/>
+		</elem>
+	</paragraph>
+</panel>
+</config>

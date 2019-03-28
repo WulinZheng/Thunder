@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GBK"?>
+<config type="addin" GUID="{15940245-B7A5-4b30-B1EF-0913F507ED5E}">
+<panel name="HintWhenNotLogin" closetimeout="0" type="hint" font_style="normal">
+	<paragraph left="10" span="100">
+		<elem type="label" text="您还没有注册或登录，请立即进入雷区享受更多精彩服务......" />
+	</paragraph>
+	<paragraph left="100" span="10">
+		<elem type="url_link" text="◆免费注册成为迅雷会员，享受更快的下载速度  ◆您的每次下载，都将获得累计积分，不断提升等级  ◆等级越高，下载资源越多，更多精彩服务即将不断推出…" color="41,91,160" hovercolor="41,91,160" url="http://wstatic.xunlei.com/web/about.htm"/>
+	</paragraph>
+	<paragraph left="100" span="40">
+		<elem type="action_link"  text="免费注册" color="41,91,160" hovercolor="41,91,160" action="{15940245-B7A5-4b30-B1EF-0913F507ED5E}.RegisterNew">
+			<icon name="blue" pos="left"/>
+		</elem>
+		<elem type="action_link" text="立即登录" color="41,91,160" hovercolor="41,91,160" action="{15940245-B7A5-4b30-B1EF-0913F507ED5E}.Login">
+			<icon name="orange" pos="left"/>
+		</elem>
+	</paragraph>
+</panel>
+</config>

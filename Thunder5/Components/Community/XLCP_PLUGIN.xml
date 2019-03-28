@@ -1,0 +1,4 @@
+<PluginList>
+<Plugin enable='true' name='XLUser' path='XLUser.dll'/>
+<Plugin enable='true' name='XLBlog' path='XLBlog.dll'/>
+</PluginList>

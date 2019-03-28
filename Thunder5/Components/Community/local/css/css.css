@@ -1,0 +1,95 @@
+/* 全局公用CSS属性 */
+* {margin:0;padding:0;}
+html { height:100%; overflow:hidden; background:#F6EBD7;}
+body {font:normal 12px/1.6em simsun, Verdana, Lucida, Arial, Helvetica, sans-serif; color:#333;}
+ol,ul {list-style:none;}
+a {text-decoration:underline; color:#E00000}
+a:hover {text-decoration:none;}
+input,select,form img,button {vertical-align:middle;}
+img {border:0;}
+button {cursor:pointer;}
+.404 {position:absolute;top:50%;left:50%;width:204px;height:48px;padding:10px 0 12px;margin:-35px 0 0 -102px;text-align:center;background:url(../img/404.png) no-repeat 0 0;}
+.loading-now {position:absolute;top:50%;left:50%;width:204px;height:48px;padding:10px 0 12px;margin:-35px 0 0 -102px;text-align:center;background:url(../img/background.jpg) no-repeat 0 0;}
+.loading-now h3 {width:160px;height:48px;overflow:hidden;margin:0 auto;text-indent:50px;line-height:48px;font-size:14px;color:#000304;background:url(../img/loading.gif) no-repeat 0 0;}
+.page404 {width:363px;height:179px;margin:-90px 0 0 -182px;background:url(../img/404.png) no-repeat 0 0;}
+.page404 h3 {display:none;}
+.page404 a {position:absolute;top:114px;left:185px;width:126px;height:30px;overflow:hidden;text-indent:-9999px;}
+.kaitong{ float:right; background:url(../img/btn_kaitong.png) no-repeat; width:153px; height:0; padding-top:38px; overflow:hidden; display:block; margin:5px 0;}
+.textlist{ line-height:24px;}
+
+.wrap{ padding:7px 8px 9px 7px; width:505px; height:405px; overflow:hidden; border:1px solid #FCF8F1; background:#F6EBD7;}
+.innrbox{ padding:10px; width:483px; height:324px; overflow:hidden; border:1px solid #C2C0C0; background:#fff; position:relative;}
+.indexbox{ height:383px; background:#fff url(../img/mini_bg.png) no-repeat}
+.indexbox h1{ height:33px; overflow:hidden; line-height:300px; font-size:0; background:url(../img/h_tt.png) no-repeat 0 0}
+.hotimg{ height:120px; margin-bottom:3px;}
+.ban{ height:64px; overflow:hidden; background:url(../img/mini_ban.jpg) no-repeat;}
+.ban p{ float:left; padding:38px 0 0 65px; color:#3C3C3C; font-family:Tahoma;}
+.ban .kt{ float:right;display:block; margin:21px 14px 0 0 ; _margin:21px 7px 0 0 ; width:126px; height:31px; text-indent:-9999em;overflow:hidden;}
+.allhere{ margin-right:-15px; width:498px; position:relative; overflow:hidden; zoom:1;}
+	.item{ float:left; margin:10px 10px 0 0; width:234px; height:70px; overflow:hidden;zoom:1; border:1px solid #F6EBD7}
+	.item h4{ float:left; margin:5px 0 0 15px; padding-top:44px; width:50px; height:16px; overflow:hidden; font-size:12px; font-weight:normal; text-align:right; background:url(../img/title.png) no-repeat 5px 0;}
+	.item .h-2{ background-position:5px -358px}
+	.item .h-3{ background-position:5px -839px}
+	.item .h-4{ background-position:3px -780px}
+	.item ul{ float:left; height:70px; padding:7px 0 0 15px;}
+.error{ padding:20px 0 0 70px; height:65px; font-size:14px; background:url(../img/title.png) no-repeat 0 -950px;}
+.wrongbox{ height:200px; padding:20px 0 0 60px;}
+.wrongbox .textlist{ padding-left:90px; margin-top:-20px; position:relative;}
+.wrongbox .btn{ padding:20px 0 0 90px; }
+.wrongbox .btn .kaitong{ float:none;}
+
+.arr-title{ padding:10px 0; margin:0 10px; border-bottom:1px solid #E6E6E6;}
+.arr-cont{ padding:10px;}
+.ppimg{ height:140px; overflow:hidden;}
+.ftbox{ padding:10px 0; overflow:hidden;zoom:1;}
+.ftbox .notice{ float:left; color:#9E6655; font-family:Tahoma;}
+
+.freetop{ padding:0 3px; position:relative;}
+.freetop .more{ position:absolute; top:15px; right:10px;}
+.freetop .more span{ padding:0 10px; color:#CCCCCC;}
+.freetop .more a{ color:#0000FE;}
+.freetop .infos{ padding-left:50px; margin-top:-5px; position:relative; line-height:22px; color:#FF0000;}
+.freetop h2{height:48px;overflow:hidden;text-indent:-9999px;background:url(../img/title.png) no-repeat 0 0;}
+	.freetop h2.tit-2 {background-position:0 -60px;}
+	.freetop h2.tit-3 {background-position:0 -127px;}
+	.freetop h2.tit-4 {background-position:0 -180px;}
+	.freetop h2.tit-5 {background-position:0 -240px;}
+	.freetop h2.tit-6 {background-position:0 -300px;}
+	.freetop h2.tit-7 {background-position:0 -360px;}
+	.freetop h2.tit-8 {background-position:0 -420px;}
+	.freetop h2.tit-9 {background-position:0 -480px;}
+	.freetop h2.tit-10 {background-position:0 -540px;}
+	.freetop h2.tit-11 {background-position:0 -600px;}
+	.freetop h2.tit-12 {background-position:0 -660px;}
+	.freetop h2.tit-13 {background-position:0 -720px;}
+	.freetop h2.tit-14 {background-position:0 -780px;}
+	.freetop h2.tit-15 {background-position:0 -840px;}
+	.freetop h2.tit-16 {background-position:0 -500px;}
+.freedoms{ padding-top:10px;}
+.freedoms dt{ padding-left:5px; height:29px; line-height:29px; font-weight:bold; background:#F5F5F5; border-top:1px solid #E0E0E0;}
+.freedoms dd{ padding:7px 0 5px;}
+.freedoms .ddimgs{ height:125px; overflow:hidden;}
+.freedoms .ddtext{ text-indent:2em; color:#666;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.panel-box {width:596px;height:190px;overflow:hidden;padding-top:11px;text-align:center;color:#9199A7;border:1px solid #DFE2E9;background:url(../img/panel-bg.gif) repeat-x 0 0;}
+.panel-box h2 {display:inline;padding:18px 0 15px 55px;line-height:52px;font-size:18px;color:#000000;background:url(../img/loading.gif) no-repeat 0 0;}
+.panel-box h2.error {background:url(../img/error.gif) no-repeat 0 0;}
+.panel-box h2.error a {font-size:12px;font-weight:normal;}
+.panel-box .content {width:500px;height:126px;overflow:hidden;padding-top:6px;margin:0 auto;text-align:left;}
+.panel-box .content h3 {width:500px;height:22px;font-size:12px;color:#5377B9;}
+.panel-box .content p {width:500px;height:44px;line-height:20px;color:#5377B9;}
+.panel-box .content li {float:left;width:500px;height:20px;}*/
