@@ -1,22 +1,22 @@
 [dl_crt]
-resolver=8032
-file_asyn_io_helper=972
-asyn_io_manager=5140
-udp_socket_portal=7340
-udt_timer=9668
+resolver=8524
+file_asyn_io_helper=11808
+asyn_io_manager=8156
+udp_socket_portal=10100
+udt_timer=5492
 intra_node_manager=7016
-wait_objects_thread=7928
-trace_route_thread=3088
+wait_objects_thread=4656
+trace_route_thread=380
 connect_thread=2204
-ping_thread=8720
+ping_thread=10080
 download_thread=2748
-cal_emule_id=8356
+cal_emule_id=12152
 [GUI_ComThunder_CXLTaskListCtrl_SendViewOnlineRequest_create]
 owner_module_name=ComThunder
 owner_class_name=CXLTaskListCtrl
 thread_fuc_name=SendViewOnlineRequest
-thread_id=7760
-thread_create_time=2019-3-28 14:13:23
+thread_id=6200
+thread_create_time=2019-3-28 14:24:35
 [GUI_ComThunder_CDllLoaderThread_LoadDllProc_create]
 owner_module_name=ComThunder
 owner_class_name=CDllLoaderThread
@@ -26,7 +26,7 @@ thread_create_time=2019-3-28 14:13:23
 [DownAndPlay_crt]
 WorkThread=1984
 [Banner_crt]
-CGetADCfgThread=8408
+CGetADCfgThread=9468
 [InMedia_crt]
 PopupIPC=2436
 PopupBackWnd=2348
@@ -38,14 +38,14 @@ ipcread=1052
 owner_module_name=DownloadStat
 owner_class_name=CXLAddin
 thread_fuc_name=TranslateThread
-thread_id=10184
-thread_create_time=2019-3-28 14:13:33
+thread_id=7640
+thread_create_time=2019-3-28 14:24:44
 [GUI_DownloadStat_CXLAddin_TimerThread_create]
 owner_module_name=DownloadStat
 owner_class_name=CXLAddin
 thread_fuc_name=TimerThread
-thread_id=3596
-thread_create_time=2019-3-28 14:13:33
+thread_id=8160
+thread_create_time=2019-3-28 14:24:44
 [GUI_ComThunder_CSecurity_CheckSecurityThread_create]
 owner_module_name=ComThunder
 owner_class_name=CSecurity
