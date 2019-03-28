@@ -1,6 +1,6 @@
 {
   "Consumption": {
-    "ShowMainWindowTime": 1553753467762,
+    "ShowMainWindowTime": 1553754462606,
     "HideMainWindowTime": 1553752753275
   },
   "book-marks-section": {
@@ -24,8 +24,8 @@
     "ConfigNet_Custom_MaxUploadSpeedTmp": 1024
   },
   "FlowMonitor": {
-    "DownloadSize": 5179371112,
-    "UploadSize": 67289611,
+    "DownloadSize": 5200388214,
+    "UploadSize": 67318226,
     "Date": "2019.3.28"
   },
   "Bookmark": {

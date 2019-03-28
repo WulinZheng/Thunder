@@ -1,13 +1,13 @@
 <root>
 	<node type='ReportEventNode' >
-		<index>5172</index>
-		<processID>5956</processID>
-		<time>1553753553</time>
-		<reporttime>1553753553</reporttime>
-		<extdata>button=exit</extdata>
-		<timestring>19-03-28 13:12:33</timestring>
-		<reporttimestring>19-03-28 13:12:33</reporttimestring>
-		<attribute1>float_monitor_rk_click</attribute1>
+		<index>5157</index>
+		<processID>6892</processID>
+		<time>1553754500</time>
+		<reporttime>1553754500</reporttime>
+		<extdata/>
+		<timestring>19-03-28 13:28:20</timestring>
+		<reporttimestring>19-03-28 13:28:20</reporttimestring>
+		<attribute1>clienttop_dropdown_click</attribute1>
 		<attribute2/>
 		<cost1>0</cost1>
 		<cost2>0</cost2>
@@ -16,12 +16,12 @@
 	</node>
 	<node type='ReportEventNode' >
 		<index>5168</index>
-		<processID>8688</processID>
-		<time>1553753554</time>
-		<reporttime>1553753554</reporttime>
-		<extdata>online_time=86.269</extdata>
-		<timestring>19-03-28 13:12:34</timestring>
-		<reporttimestring>19-03-28 13:12:34</reporttimestring>
+		<processID>5240</processID>
+		<time>1553754501</time>
+		<reporttime>1553754501</reporttime>
+		<extdata>online_time=38.61</extdata>
+		<timestring>19-03-28 13:28:21</timestring>
+		<reporttimestring>19-03-28 13:28:21</reporttimestring>
 		<attribute1>main_effective_online_time</attribute1>
 		<attribute2/>
 		<cost1>0</cost1>
@@ -31,73 +31,13 @@
 	</node>
 	<node type='ReportEventNode' >
 		<index>5168</index>
-		<processID>8688</processID>
-		<time>1553753554</time>
-		<reporttime>1553753554</reporttime>
-		<extdata>exitType=manual,online_time=88.109</extdata>
-		<timestring>19-03-28 13:12:34</timestring>
-		<reporttimestring>19-03-28 13:12:34</reporttimestring>
+		<processID>5240</processID>
+		<time>1553754501</time>
+		<reporttime>1553754501</reporttime>
+		<extdata>exitType=manual,online_time=40.092</extdata>
+		<timestring>19-03-28 13:28:21</timestring>
+		<reporttimestring>19-03-28 13:28:21</reporttimestring>
 		<attribute1>client_all_online_time</attribute1>
-		<attribute2/>
-		<cost1>0</cost1>
-		<cost2>0</cost2>
-		<cost3>0</cost3>
-		<cost4>0</cost4>
-	</node>
-	<node type='ReportEventNode' >
-		<index>5172</index>
-		<processID>5956</processID>
-		<time>1553753552</time>
-		<reporttime>1553753552</reporttime>
-		<extdata/>
-		<timestring>19-03-28 13:12:32</timestring>
-		<reporttimestring>19-03-28 13:12:32</reporttimestring>
-		<attribute1>float_monitor_hover_show</attribute1>
-		<attribute2/>
-		<cost1>0</cost1>
-		<cost2>0</cost2>
-		<cost3>0</cost3>
-		<cost4>0</cost4>
-	</node>
-	<node type='ReportEventNode' >
-		<index>5172</index>
-		<processID>5956</processID>
-		<time>1553753552</time>
-		<reporttime>1553753552</reporttime>
-		<extdata/>
-		<timestring>19-03-28 13:12:32</timestring>
-		<reporttimestring>19-03-28 13:12:32</reporttimestring>
-		<attribute1>float_monitor_show</attribute1>
-		<attribute2/>
-		<cost1>0</cost1>
-		<cost2>0</cost2>
-		<cost3>0</cost3>
-		<cost4>0</cost4>
-	</node>
-	<node type='ReportEventNode' >
-		<index>5172</index>
-		<processID>5956</processID>
-		<time>1553753553</time>
-		<reporttime>1553753553</reporttime>
-		<extdata/>
-		<timestring>19-03-28 13:12:33</timestring>
-		<reporttimestring>19-03-28 13:12:33</reporttimestring>
-		<attribute1>float_monitor_hover_show</attribute1>
-		<attribute2/>
-		<cost1>0</cost1>
-		<cost2>0</cost2>
-		<cost3>0</cost3>
-		<cost4>0</cost4>
-	</node>
-	<node type='ReportEventNode' >
-		<index>5172</index>
-		<processID>5956</processID>
-		<time>1553753553</time>
-		<reporttime>1553753553</reporttime>
-		<extdata>time=0.42</extdata>
-		<timestring>19-03-28 13:12:33</timestring>
-		<reporttimestring>19-03-28 13:12:33</reporttimestring>
-		<attribute1>float_monitor_online_time</attribute1>
 		<attribute2/>
 		<cost1>0</cost1>
 		<cost2>0</cost2>
